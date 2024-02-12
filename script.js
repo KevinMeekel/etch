@@ -3,8 +3,6 @@ let axisLength = 16;
 const gridContainer = document.querySelector(".grid-container");
 gridContainer.style = "display: flex; flex-direction: column; background-color: green; gap: 1px";
 
-const block = document.createElement("div");
-
 function randomColor() {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);

@@ -13,8 +13,8 @@ body {
 }
 
 .grid-container {
-    height: 960px;
-    width: 960px;
+    height: 840px;
+    width: 840px;
     display: flex;
     filter: brightness();
     color: rgba(red, green, blue, alpha);

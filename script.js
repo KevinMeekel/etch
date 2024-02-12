@@ -5,6 +5,14 @@ gridContainer.style = "display: flex; flex-direction: column; background-color: 
 
 const block = document.createElement("div");
 
+function randomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+
+    return `rgb( ${r} , ${g} , ${b} )`
+}
+
 function createGrid(length) {
     gridContainer.innerHTML = "";
     
@@ -19,13 +27,10 @@ function createGrid(length) {
     for (const row of rows) {
         for (let i = 0; i < length; i++) {
             const block = document.createElement("div");
-            block.style = "background-color: red; display: flex; flex-grow: 1; border: 1px solid black";
+            block.style = "background-color: white; display: flex; flex-grow: 1; border: 1px solid black; filter: brightness(1)";
             block.classList.add("block");
             block.addEventListener("mouseover", function() {
-                this.style.backgroundColor = "orange"; // Change background color to orange on hover
-            });
-            block.addEventListener("mouseout", function() {
-                this.style.backgroundColor = "red"; // Change back to red when mouse leaves
+                this.style.backgroundColor = randomColor();
             });
             row.appendChild(block);
         }
@@ -40,3 +45,4 @@ setButton.addEventListener("click", (e) => {
     axisLength = input;
     createGrid(axisLength);
 });
+

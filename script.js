@@ -39,8 +39,13 @@ createGrid(axisLength);
 
 const setButton = document.querySelector(".set");
 setButton.addEventListener("click", (e) => {
-    const input = prompt("type in a value between 1 and 100");
-    axisLength = input;
-    createGrid(axisLength);
+    const inputField = document.getElementById("numberInput");
+    const inputValue = parseInt(inputField.value); // Get value from input field
+    if (inputValue >= 1 && inputValue <= 100) {
+        axisLength = inputValue;
+        createGrid(axisLength);
+    } else {
+        alert("Please enter a value between 1 and 100.");
+        }
 });
 

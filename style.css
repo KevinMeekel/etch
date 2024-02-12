@@ -1,5 +1,11 @@
+.set {
+    padding: 20px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
 .grid-container {
-    height: 960px;
-    width: 960px;
+    height: 1200px;
+    width: 1200px;
     display: flex;
 }

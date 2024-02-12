@@ -25,7 +25,7 @@ function createGrid(length) {
     for (const row of rows) {
         for (let i = 0; i < length; i++) {
             const block = document.createElement("div");
-            block.style = "background-color: white; display: flex; flex-grow: 1; border: 1px solid black; filter: brightness(1)";
+            block.style = "background-color: white; display: flex; flex-grow: 1; border: 1px solid black";
             block.classList.add("block");
             block.addEventListener("mouseover", function() {
                 this.style.backgroundColor = randomColor();
